@@ -180,16 +180,16 @@ export default function Menu() {
     { id: 'food', label: 'Food' },
   ];
 
-  const currentData = activeTab === 'drinks' ? M_DRINKS : M_FOOD;
+  const currentData: any[] = activeTab === 'drinks' ? M_DRINKS : M_FOOD;
 
-  const filteredData = currentData.map(section => {
+  const filteredData = currentData.map((section: any) => {
     return {
       ...section,
-      items: section.items.filter(item => 
+      items: section.items.filter((item: any) => 
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
     };
-  }).filter(section => section.items.length > 0);
+  }).filter((section: any) => section.items.length > 0);
 
   return (
     <div className="bg-brand-light min-h-screen pt-28 pb-20 font-sans">
@@ -235,7 +235,7 @@ export default function Menu() {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredData.map((section, idx) => (
+            {filteredData.map((section: any, idx: number) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border-2 border-brand-dark shadow-brutal flex flex-col h-full hover:shadow-brutal-hover hover:translate-y-1 hover:translate-x-1 transition-all">
                 <div className="mb-4 border-b-2 border-brand-dark pb-3">
                   <h2 className="font-display text-2xl font-black text-brand-dark uppercase tracking-tight">
@@ -247,7 +247,7 @@ export default function Menu() {
                 </div>
 
                 <div className="flex flex-col gap-4 flex-grow">
-                  {section.items.map((item, i) => (
+                  {section.items.map((item: any, i: number) => (
                     <div key={i} className="flex justify-between items-start border-b border-brand-brown/10 pb-3 last:border-0 last:pb-0 group">
                       <div className="pr-4">
                         <h3 className="font-bold text-lg text-brand-dark group-hover:text-brand-accent transition-colors flex items-center flex-wrap gap-2">
