@@ -1,4 +1,6 @@
-import { useState } from 'react';
+const fs = require('fs');
+
+const menuCode = `import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const StarIcon = () => (
@@ -195,11 +197,11 @@ export default function Menu() {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-6 py-3 rounded-xl font-bold uppercase tracking-wide border-2 border-brand-dark transition-all ${
+            className={\`px-6 py-3 rounded-xl font-bold uppercase tracking-wide border-2 border-brand-dark transition-all \${
               activeTab === tab.id
                 ? 'bg-brand-primary text-white shadow-[4px_4px_0_0_#431407] -translate-y-1 -translate-x-1'
                 : 'bg-white text-brand-dark hover:bg-brand-beige shadow-sm'
-            }`}
+            }\`}
           >
             {tab.label}
           </button>
@@ -262,3 +264,7 @@ export default function Menu() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/pages/Menu.tsx', menuCode);
+console.log('Menu updated!');
