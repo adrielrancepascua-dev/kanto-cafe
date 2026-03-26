@@ -9,7 +9,7 @@ export default function Layout() {
   return (
     <div className="flex flex-col min-h-screen bg-brand-light">
       <Navbar />
-      <main className="flex-grow pt-20 pb-20 md:pb-0">
+      <main className="flex-grow pt-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -22,13 +22,6 @@ export default function Layout() {
           </motion.div>
         </AnimatePresence>
       </main>
-      
-      {/* Floating Bottom Bar for Mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white p-3 border-t-2 border-brand-dark shadow-brutal flex justify-between gap-2 md:hidden"> 
-        <Link to="/menu" className="flex-1 bg-brand-beige border border-brand-dark text-black text-center py-3 rounded-lg font-bold">View Menu</Link> 
-        <a href="https://www.foodpanda.ph/" className="flex-1 bg-brand-primary text-white text-center py-3 rounded-lg font-bold shadow-[2px_2px_0_0_#431407]">Order Now</a> 
-      </div>
-
       <Footer />
     </div>
   );
