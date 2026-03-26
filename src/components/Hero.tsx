@@ -23,12 +23,17 @@ export default function Hero() {
           <span className="inline-block py-1 px-3 rounded-full bg-brand-accent text-brand-dark font-bold text-sm tracking-wider mb-6 uppercase shadow-brutal animate-bounce">
             Tara Kape! Open Daily 9 AM - 12 MN
           </span>
-          <h1 className="font-display text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight uppercase">
-            Kanto Café <span className="text-brand-primary">- Crafted drinks</span><br/> and comfort food
+          <h1 className="font-display text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight uppercase relative inline-block">
+            Coffee, Meals, and <span className="text-brand-primary">Barkada Hangouts</span><br/> in Dagupan
+            <div className="absolute -top-6 -right-10 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-full shadow-brutal rotate-12 hidden md:block">
+              🔥 Best Sellers
+            </div>
+            <div className="absolute -bottom-4 -left-8 bg-brand-light text-brand-dark text-xs font-bold px-3 py-1 rounded-full shadow-brutal -rotate-6 hidden md:block">
+              ⭐ Crowd Favorites
+            </div>
           </h1>
           <p className="text-xl text-brand-light/90 mb-10 max-w-2xl mx-auto font-medium">
-            Barkada nights, study sessions, and late-night cravings. 
-            Come for the coffee, stay for the high-energy, cozy vibes in Dagupan.
+            Open until midnight • Perfect for study, dates, and late-night cravings
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

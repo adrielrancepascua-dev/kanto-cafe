@@ -173,6 +173,7 @@ export default function Menu() {
   const typeParam = searchParams.get('type');
   const initialTab = typeParam === 'food' ? 'food' : 'drinks';
   const [activeTab, setActiveTab] = useState(initialTab);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const tabs = [
     { id: 'drinks', label: 'Drinks & Coffee' },
@@ -181,16 +182,34 @@ export default function Menu() {
 
   const currentData = activeTab === 'drinks' ? M_DRINKS : M_FOOD;
 
+  const filteredData = currentData.map(section => {
+    return {
+      ...section,
+      items: section.items.filter(item => 
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    };
+  }).filter(section => section.items.length > 0);
+
   return (
     <div className="bg-brand-light min-h-screen pt-28 pb-20 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
         <h1 className="font-display text-5xl md:text-6xl font-black text-brand-dark uppercase tracking-tight mb-4">Our Menu</h1>
-        <p className="text-xl text-brand-brown font-medium max-w-2xl mx-auto">
+        <p className="text-xl text-brand-brown font-medium max-w-2xl mx-auto mb-6">
           Crafted drinks and comfort food.
         </p>
+        <div className="max-w-md mx-auto relative">
+          <input 
+            type="text" 
+            placeholder="Search our menu..." 
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-6 py-4 rounded-xl border-2 border-brand-dark shadow-brutal font-bold text-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+          />
+        </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 mb-12 flex flex-wrap justify-center gap-3">
+      <div className="max-w-5xl mx-auto px-4 mb-12 flex flex-wrap justify-center gap-3 sticky top-20 z-50 bg-brand-light shadow-sm pb-2 pt-4 md:static md:bg-transparent md:shadow-none md:p-0">
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -216,7 +235,7 @@ export default function Menu() {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {currentData.map((section, idx) => (
+            {filteredData.map((section, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border-2 border-brand-dark shadow-brutal flex flex-col h-full hover:shadow-brutal-hover hover:translate-y-1 hover:translate-x-1 transition-all">
                 <div className="mb-4 border-b-2 border-brand-dark pb-3">
                   <h2 className="font-display text-2xl font-black text-brand-dark uppercase tracking-tight">
@@ -227,22 +246,27 @@ export default function Menu() {
                   )}
                 </div>
 
-                <div className="flex flex-col gap-3 flex-grow">
+                <div className="flex flex-col gap-4 flex-grow">
                   {section.items.map((item, i) => (
-                    <div key={i} className="flex justify-between items-start border-b border-brand-brown/10 pb-2 last:border-0 last:pb-0 group">
+                    <div key={i} className="flex justify-between items-start border-b border-brand-brown/10 pb-3 last:border-0 last:pb-0 group">
                       <div className="pr-4">
-                        <h3 className="font-bold text-base text-brand-dark group-hover:text-brand-accent transition-colors flex items-center flex-wrap gap-1">
+                        <h3 className="font-bold text-lg text-brand-dark group-hover:text-brand-accent transition-colors flex items-center flex-wrap gap-2">
                           {item.name} 
-                          {item.bestSeller && <StarIcon />}
-                          {item.isNew && <HeartIcon />}
+                          {item.bestSeller && <span className="text-xs bg-brand-accent text-brand-dark px-2 py-0.5 rounded-full font-black border border-brand-dark flex items-center shadow-brutal hover:scale-105 transition-transform"><StarIcon /> Best Seller</span>}
+                          {item.isNew && <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-black border border-red-200 flex items-center"><HeartIcon /> New</span>}
                         </h3>
-                        {item.desc && <p className="text-xs text-brand-brown/70 leading-snug mt-1">{item.desc}</p>}
+                        {item.desc && <p className="text-sm text-brand-brown/80 leading-snug mt-1 font-medium">{item.desc}</p>}
                       </div>
-                      <span className="font-black text-brand-primary bg-brand-beige px-2 py-1 rounded-md text-xs border-2 border-brand-brown/20 whitespace-nowrap">
+                      <span className="font-black text-white bg-brand-dark px-3 py-1.5 rounded-lg text-sm border-2 border-brand-primary whitespace-nowrap shadow-sm">
                         {item.price}
                       </span>
                     </div>
                   ))}
+                  <div className="mt-4 pt-2 border-t border-dashed border-brand-brown/30">
+                    <a href="https://www.foodpanda.ph/" className="block w-full text-center bg-brand-beige border-2 border-brand-dark text-brand-dark py-2 font-black rounded-lg hover:bg-brand-primary hover:text-white transition-colors text-sm uppercase tracking-wide">
+                      👉 Order Now
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

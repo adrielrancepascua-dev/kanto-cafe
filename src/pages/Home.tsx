@@ -1,99 +1,118 @@
 import Hero from '../components/Hero';
-import { Users, Wifi, Clock, Star, Gift, Utensils, ArrowRight } from 'lucide-react';
+import { Users, Wifi, Clock, Star, Gift, Utensils, ArrowRight, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function Home() {
-  const experiences = [
-    {
-      icon: <Users className="w-8 h-8 text-brand-primary" />,
-      title: "Barkada Core",
-      desc: "Spacious seating designed for groups. Laugh, eat, and stay as long as you want."
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-brand-accent" />,
-      title: "Late Night Hangs",
-      desc: "Open from 9 AM all the way to 12 Midnight for your late-night food & coffee cravings."
-    },
-    {
-      icon: <Wifi className="w-8 h-8 text-brand-primary" />,
-      title: "Study & Work",
-      desc: "Free speedy WiFi, cozy corners on our second floor, and unlimited caffeine."
-    },
-    {
-      icon: <Star className="w-8 h-8 text-brand-accent" />,
-      title: "VIP Room",
-      desc: "Need privacy? Book our conference room for professional meetings or private parties."
-    }
+  const quickMenu = [
+    { name: "Kanto Latte", type: "Drink", price: "₱140", img: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" },
+    { name: "Hazelnut Latte", type: "Drink", price: "₱150", img: "https://images.unsplash.com/photo-1585494156145-1c60a4fe952b?auto=format&fit=crop&w=600&q=80" },
+    { name: "Cookies & Cream Frappe", type: "Frappe", price: "₱180", img: "https://images.unsplash.com/photo-1572490122747-3968b75bb69c?auto=format&fit=crop&w=600&q=80" },
+    { name: "Bangsilog", type: "Meal", price: "₱220", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" },
+    { name: "The Euphoria Burger", type: "Burger", price: "₱260", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" },
+    { name: "Strawberry Shortcake", type: "Dessert", price: "₱230", img: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80" }
   ];
 
-  const bestSellers = [
-    { name: "Spanish Latte", type: "Drink", img: "https://images.unsplash.com/photo-1560931560-619058b73a34?auto=format&fit=crop&w=600&q=80" },
-    { name: "Java Chip Frappe", type: "Frappe", img: "https://images.unsplash.com/photo-1530373239216-42518e6b4063?auto=format&fit=crop&w=600&q=80" },
-    { name: "Beef Salpicao", type: "Meal", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" },
-    { name: "Flavoured Croffles", type: "Pastry", img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" }
+  const whoIsThisFor = [
+    { text: "Barkada hangouts", icon: <Users className="w-8 h-8 text-brand-primary" />, bg: "bg-white" },
+    { text: "Study sessions", icon: <Wifi className="w-8 h-8 text-brand-dark" />, bg: "bg-brand-beige" },
+    { text: "Late-night cravings", icon: <Clock className="w-8 h-8 text-brand-primary" />, bg: "bg-white" },
+    { text: "Casual dates", icon: <Heart className="w-8 h-8 text-brand-dark" />, bg: "bg-brand-beige" }
   ];
 
   return (
     <div className="bg-brand-light font-sans">
       <Hero />
 
-      {/* Experience Section */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-black text-brand-dark uppercase tracking-tight">Why People Come Here</h2>
-          <p className="mt-4 text-brand-brown font-medium text-lg">This is where you go with friends.</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {experiences.map((exp, i) => (
-            <motion.div 
-              key={i}
-              whileHover={{ y: -8 }}
-              className="bg-white p-8 rounded-2xl border-2 border-brand-dark shadow-brutal transition-transform"
-            >
-              <div className="bg-brand-beige w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-brand-dark">
-                {exp.icon}
-              </div>
-              <h3 className="font-display text-2xl font-bold text-brand-dark mb-3">{exp.title}</h3>
-              <p className="text-brand-brown/80 leading-relaxed">{exp.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Menu / Best Sellers */}
+      {/* Quick Menu Preview */}
       <section className="py-24 bg-brand-dark text-brand-light px-4 border-y-4 border-brand-primary">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
-              <h2 className="font-display text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Crowd Favorites</h2>
-              <p className="mt-4 text-brand-accent font-medium text-lg">You can never go wrong with these Bestsellers.</p>
+              <h2 className="font-display text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Best Sellers</h2>
+              <p className="mt-4 text-brand-accent font-medium text-lg">Quick preview of our crowd favorites.</p>
             </div>
             <Link to="/menu" className="bg-brand-primary text-white font-bold py-3 px-8 rounded-xl border-2 border-transparent hover:border-white transition-all shadow-[4px_4px_0_0_#FFF]">
               See Full Menu
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bestSellers.map((item, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {quickMenu.map((item, i) => (
               <motion.div 
                 key={i}
                 whileHover={{ scale: 1.02 }}
-                className="group rounded-2xl overflow-hidden bg-brand-brown/40 border border-brand-brown relative"
+                className="group rounded-2xl overflow-hidden bg-white border-2 border-brand-dark shadow-brutal relative flex flex-col"
               >
-                <div className="h-64 overflow-hidden relative">
+                <div className="h-56 overflow-hidden relative">
                   <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute top-4 left-4 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase">
-                    {item.type}
+                  <div className="absolute top-4 left-4 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase flex items-center gap-1">
+                    <Star className="w-3 h-3 fill-current" /> Best Seller
                   </div>
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-display text-xl font-bold text-white mb-2">{item.name}</h3>
+                <div className="p-6 text-center flex-grow flex flex-col">
+                  <h3 className="font-display text-xl font-black text-brand-dark mb-2">{item.name}</h3>
+                  <div className="text-brand-primary font-black text-lg mb-4">{item.price}</div>
+                  <div className="mt-auto">
+                    <Link to="/menu" className="block w-full text-center bg-brand-beige border-2 border-brand-dark text-brand-dark py-2 font-bold rounded-lg hover:bg-brand-primary hover:text-white transition-colors">
+                      👉 See Full Menu
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-brand-dark uppercase tracking-tight">Why People Love Kanto Cafe</h2>
+          <p className="mt-4 text-brand-brown font-black text-xl bg-brand-accent text-brand-dark inline-block px-4 py-1 rounded-full rotate-2">300+ customers served weekly</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <motion.div 
+            whileHover={{ y: -8 }}
+            className="bg-white p-8 rounded-2xl border-2 border-brand-dark shadow-brutal transition-transform"
+          >
+            <div className="flex text-brand-accent mb-4">
+              <Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/>
+            </div>
+            <p className="font-display text-2xl font-bold text-brand-dark italic">"Solid tambayan, sarap ng food, babalik talaga kami!"</p>
+          </motion.div>
+          <motion.div 
+            whileHover={{ y: -8 }}
+            className="bg-brand-beige p-8 rounded-2xl border-2 border-brand-dark shadow-brutal transition-transform"
+          >
+            <div className="flex text-brand-accent mb-4">
+              <Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/><Star className="w-6 h-6 fill-current"/>
+            </div>
+            <p className="font-display text-2xl font-bold text-brand-dark italic">"Perfect for late-night study sessions."</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Who Is This For? */}
+      <section className="py-24 bg-brand-primary px-4 border-t-4 border-brand-dark">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-white uppercase tracking-tight bg-brand-dark inline-block px-8 py-3 rounded-2xl shadow-[6px_6px_0_0_#F59E0B] -rotate-2">This place is for you if:</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {whoIsThisFor.map((item, i) => (
+            <motion.div 
+              key={i}
+              whileHover={{ y: -8 }}
+              className={`${item.bg} p-8 rounded-2xl border-2 border-brand-dark shadow-brutal transition-transform flex flex-col items-center text-center gap-4`}
+            >
+              <div className="bg-brand-accent w-16 h-16 rounded-xl flex items-center justify-center border-2 border-brand-dark shadow-sm">
+                {item.icon}
+              </div>
+              <h3 className="font-display text-2xl font-black text-brand-dark">{item.text}</h3>
+            </motion.div>
+          ))}
         </div>
       </section>
 
