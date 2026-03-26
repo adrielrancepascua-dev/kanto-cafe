@@ -8,9 +8,9 @@ export default function Home() {
     { name: "Kanto Latte", type: "Drink", price: "₱140", img: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" },
     { name: "Hazelnut Latte", type: "Drink", price: "₱150", img: "https://images.unsplash.com/photo-1585494156145-1c60a4fe952b?auto=format&fit=crop&w=600&q=80" },
     { name: "Cookies & Cream Frappe", type: "Frappe", price: "₱180", img: "https://images.unsplash.com/photo-1572490122747-3968b75bb69c?auto=format&fit=crop&w=600&q=80" },
-    { name: "Bangsilog", type: "Meal", price: "₱220", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" },
+    { name: "Bangsilog", type: "Meal", price: "₱220", img: "https://images.unsplash.com/photo-1627308595229-7830f5c9100f?auto=format&fit=crop&w=600&q=80" },
     { name: "The Euphoria Burger", type: "Burger", price: "₱260", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" },
-    { name: "Strawberry Shortcake", type: "Dessert", price: "₱230", img: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80" }
+    { name: "Strawberry Shortcake", type: "Dessert", price: "₱230", img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" }
   ];
 
   const whoIsThisFor = [
