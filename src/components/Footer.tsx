@@ -8,15 +8,15 @@ export default function Footer() {
           
           {/* Brand & About */}
           <div>
-            <h3 className="font-serif text-2xl font-bold mb-4 text-brand-beige">Café BrewsCo</h3>
+            <h3 className="font-serif text-2xl font-bold mb-4 text-brand-beige">Kanto Cafe</h3>
             <p className="text-brand-beige/80 mb-6 leading-relaxed">
-              Brewing Happiness in a Cup. Love is brewing at Café BrewsCo – come for the coffee, stay for the cozy vibes.
+              Brewing Happiness in a Cup. Love is brewing at Kanto Cafe – come for the coffee, stay for the cozy vibes.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/cafebrewsco/" target="_blank" rel="noopener noreferrer" className="text-brand-beige/80 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/kantocafe.ph/" target="_blank" rel="noopener noreferrer" className="text-brand-beige/80 hover:text-white transition-colors">
                 <span className="font-bold">IG</span>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61561919513292" target="_blank" rel="noopener noreferrer" className="text-brand-beige/80 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/KantoCafe/" target="_blank" rel="noopener noreferrer" className="text-brand-beige/80 hover:text-white transition-colors">
                  <span className="font-bold">FB</span>
               </a>
             </div>
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-4 text-brand-beige/80">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>Thirdy & Julios Commercial Building<br/>Rizal Avenue, Poblacion, San Carlos City</span>
+                <span>Thirdy & Julios Commercial Building<br/>Rizal Avenue, Poblacion, Dagupan City</span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 mt-0.5 flex-shrink-0" />
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-brand-beige/10 mt-12 pt-8 text-center text-brand-beige/40 text-sm">
-          <p>&copy; {new Date().getFullYear()} Café BrewsCo. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Kanto Cafe. All rights reserved.</p>
         </div>
       </div>
     </footer>

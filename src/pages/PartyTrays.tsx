@@ -15,7 +15,7 @@ export default function PartyTrays() {
         <div className="prose prose-lg prose-headings:font-serif prose-headings:text-brand-dark text-brand-dark/80 mx-auto text-center">
           <h2 className="text-3xl mb-8">Make Your Events Sweeter!</h2>
           <p className="mb-6">
-            Café BrewsCo accepts advance orders for Party Trays (good for 12-15 people) and Bilao packages (S/M/L) to make your celebrations hassle-free!
+            Kanto Cafe accepts advance orders for Party Trays (good for 12-15 people) and Bilao packages (S/M/L) to make your celebrations hassle-free!
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 text-left">

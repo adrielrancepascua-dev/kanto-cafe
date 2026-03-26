@@ -127,7 +127,7 @@ export default function Home() {
               <span className="bg-brand-primary p-2 rounded-full text-white"><Utensils className="w-5 h-5"/></span>
               Thirdy & Julios Commercial Building
             </p>
-            <p className="text-brand-brown">Rizal Avenue, Poblacion, San Carlos City</p>
+            <p className="text-brand-brown">Rizal Avenue, Poblacion, Dagupan City</p>
             <p className="text-brand-brown text-sm mt-1 mb-6">Just after Manzon Bridge, across Pangasinan Doctors Hospital.</p>
             <div className="h-px w-full bg-brand-beige mb-6"></div>
             <p className="text-brand-dark font-bold">Hours: <span className="text-brand-primary">9 AM - 12 Midnight</span></p>

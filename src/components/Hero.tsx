@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
-          alt="Café BrewsCo Interior"
+          alt="Kanto Café Interior"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 to-brand-dark/60 mix-blend-multiply" />
@@ -21,14 +21,14 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="inline-block py-1 px-3 rounded-full bg-brand-accent text-brand-dark font-bold text-sm tracking-wider mb-6 uppercase shadow-brutal animate-bounce">
-            Open Daily 9 AM - 12 MN
+            Tara Kape! Open Daily 9 AM - 12 MN
           </span>
           <h1 className="font-display text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight uppercase">
-            Your Go-To <span className="text-brand-primary">Hangout Spot</span><br/> in San Carlos
+            Kanto Café <span className="text-brand-primary">- Crafted drinks</span><br/> and comfort food
           </h1>
           <p className="text-xl text-brand-light/90 mb-10 max-w-2xl mx-auto font-medium">
             Barkada nights, study sessions, and late-night cravings. 
-            Come for the coffee, stay for the high-energy, cozy vibes.
+            Come for the coffee, stay for the high-energy, cozy vibes in Dagupan.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

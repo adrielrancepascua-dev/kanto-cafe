@@ -5,12 +5,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          light: '#FFF7ED',   // orange-50: lively warm white
-          beige: '#FFEDD5',   // orange-100: soft energetic cream
-          primary: '#EA580C', // orange-600: vibrant vibrant primary
-          accent: '#F59E0B',  // yellow-500: playful pop
-          brown: '#9A3412',   // orange-800: rich warm dark
-          dark: '#431407',    // orange-950: deepest contrast
+          light: '#FFFDF9',   // cream/off-white
+          beige: '#F5F5DC',   // cream/off-white alternative
+          primary: '#8B4513', // Warm espresso brown
+          accent: '#E68A00',  // caramel orange
+          brown: '#8B4513',   // Warm espresso brown
+          dark: '#000000',    // black accents
         },
       },
       fontFamily: {

@@ -6,14 +6,14 @@ export default function About() {
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
-            alt="About Café BrewsCo" 
+            alt="About Kanto Cafe" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-brand-dark/50" />
         </div>
         <div className="relative z-10 text-center max-w-4xl px-4">
           <h1 className="font-serif text-5xl font-bold text-white mb-6">Our Story</h1>
-          <p className="text-brand-light text-lg opacity-90">Brewing Happiness in a Cup in the heart of San Carlos.</p>
+          <p className="text-brand-light text-lg opacity-90">Brewing Happiness in a Cup in the heart of Dagupan.</p>
         </div>
       </div>
 
@@ -21,8 +21,8 @@ export default function About() {
         <div className="prose prose-lg prose-headings:font-serif prose-headings:text-brand-dark text-brand-dark/80 mx-auto">
           <h2>More Than Just a Coffee Shop</h2>
           <p>
-            <strong>Café BrewsCo</strong> started in 2024 and has quickly become a beloved hangout spot in 
-            San Carlos City. Located in the Thirdy & Julios Commercial Building, we offer a sanctuary where friends 
+            <strong>Kanto Cafe</strong> started in 2024 and has quickly become a beloved hangout spot in 
+            Dagupan City. Located in the Thirdy & Julios Commercial Building, we offer a sanctuary where friends 
             can gather for barkada nights, students can focus on study sessions, and families can enjoy warm moments together.
           </p>
           <p>

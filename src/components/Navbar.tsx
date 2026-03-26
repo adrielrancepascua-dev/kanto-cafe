@@ -7,9 +7,10 @@ export default function Navbar() {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'Drinks', href: '/menu?type=drinks' },
+    { name: 'Food', href: '/menu?type=food' },
     { name: 'About', href: '/about' },
-    { name: 'Menu', href: '/menu' },
-    { name: 'Party Trays', href: '/party-trays' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -22,7 +23,7 @@ export default function Navbar() {
           <div className="bg-brand-primary p-2 rounded-lg shadow-[3px_3px_0_0_#431407] group-hover:shadow-[1px_1px_0_0_#431407] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all border border-brand-dark">
             <Coffee className="h-6 w-6 text-white" />
           </div>
-          <span className="font-display text-2xl font-black text-brand-dark uppercase tracking-tight">Café BrewsCo</span>
+          <span className="font-display text-2xl font-black text-brand-dark uppercase tracking-tight">Kanto Cafe</span>
         </Link>
         
         {/* Desktop Links */}

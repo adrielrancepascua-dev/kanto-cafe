@@ -29,13 +29,13 @@ const MENU_DATA: Record<string, {name: string, price: string, desc: string}[]> =
 };
 
 export default function Menu() {
-  const [activeTab, setActiveTab] = useState('meals');
+  const searchParams = new URLSearchParams(window.location.search);
+  const initialTab = searchParams.get('type') === 'drinks' ? 'drinks' : searchParams.get('type') === 'food' ? 'meals' : 'meals';
+  const [activeTab, setActiveTab] = useState(initialTab);
 
   const tabs = [
-    { id: 'meals', label: 'Full Meals' },
-    { id: 'pasta_snacks', label: 'Pasta & Snacks' },
+    { id: 'meals', label: 'Food' },
     { id: 'drinks', label: 'Drinks & Coffee' },
-    { id: 'party', label: 'Party Trays' },
   ];
 
   return (

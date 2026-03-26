@@ -22,7 +22,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-brand-dark">Visit Us</h3>
                   <p className="text-brand-dark/70">Thirdy & Julios Commercial Building<br/>Rizal Avenue, Poblacion</p>
-                  <p className="text-sm text-brand-dark/50 mt-1">San Carlos City, Pangasinan (across Pangasinan Doctors Hospital)</p>
+                  <p className="text-sm text-brand-dark/50 mt-1">Dagupan City, Pangasinan (across Pangasinan Doctors Hospital)</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-brand-dark">Email Us</h3>
-                  <p className="text-brand-dark/70">brewsco.mail@gmail.com</p>
+                  <p className="text-brand-dark/70">hello@kantocafe.ph</p>
                 </div>
               </div>
               
@@ -115,7 +115,7 @@ export default function Contact() {
              style={{ border: 0 }} 
              allowFullScreen 
              loading="lazy" 
-             title="Café BrewsCo Location"
+             title="Kanto Cafe Location"
            ></iframe>
         </div>
       </div>
